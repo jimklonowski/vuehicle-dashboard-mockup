@@ -80,15 +80,31 @@ export default {
   data: () => ({
     drawer: null,
     items: [
-      { icon: 'dashboard', text: 'Fleet Dashboard', to: '/fleet-dashboard' },
+      {
+        icon: 'dashboard',
+        text: 'Fleet Dashboard',
+        to: '/fleet-dashboard'
+      },
       {
         icon: 'table_chart',
         text: 'Vehicle Dashboard',
         to: '/vehicle-dashboard'
       },
-      { icon: 'pie_chart', text: 'My Reports', to: '/my-reports' },
-      { icon: 'show_chart', text: 'Fleet Reports', to: '/fleet-reports' },
-      { icon: 'build', text: 'Fleet Resources', to: '/fleet-resources' }
+      {
+        icon: 'show_chart',
+        text: 'Fleet Reports',
+        to: '/fleet-reports'
+      },
+      {
+        icon: 'build',
+        text: 'Fleet Resources',
+        to: '/fleet-resources'
+      },
+      {
+        icon: 'message',
+        text: 'Fleet Messenger',
+        to: '/fleet-messenger'
+      }
     ],
     items2: [
       { picture: 28, text: 'Joseph' },
@@ -99,7 +115,7 @@ export default {
     ]
   }),
   created() {
-    this.$vuetify.theme.dark = true
+    //this.$vuetify.theme.dark = true
   }
 }
 </script>

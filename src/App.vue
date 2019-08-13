@@ -21,4 +21,7 @@ export default {
   })
 }
 </script>
-<style scoped></style>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+</style>

@@ -22,20 +22,57 @@ const router = new Router({
     {
       path: '/vehicle-dashboard',
       name: 'vehicledashboard',
-      component: () => import('./views/VehicleDashboard.vue')
+      component: () => import('./views/VehicleDashboard/VehicleDashboard.vue'),
+      children: [
+        {
+          path: '/vehicle-dashboard/general',
+          name: 'general',
+          component: () => import('./views/VehicleDashboard/General.vue')
+        },
+        {
+          path: '/vehicle-dashboard/expenses',
+          name: 'expenses',
+          component: () => import('./views/VehicleDashboard/Expenses.vue')
+        },
+        {
+          path: '/vehicle-dashboard/billing',
+          name: 'billing',
+          component: () => import('./views/VehicleDashboard/Billing.vue')
+        },
+        {
+          path: '/vehicle-dashboard/maintenance',
+          name: 'maintenance',
+          component: () => import('./views/VehicleDashboard/Maintenance.vue')
+        },
+        {
+          path: '/vehicle-dashboard/fuel',
+          name: 'fuel',
+          component: () => import('./views/VehicleDashboard/Fuel.vue')
+        },
+        {
+          path: '/vehicle-dashboard/accident',
+          name: 'accident',
+          component: () => import('./views/VehicleDashboard/Accident.vue')
+        }
+      ]
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('./views/About.vue'),
-      meta: {
-        authRequired: true
-      }
+      path: '/fleet-reports',
+      name: 'fleetreports',
+      component: () => import('./views/FleetReports.vue')
     },
     {
-      path: '/menu',
-      name: 'menu',
-      component: () => import('./views/Menu.vue')
+      path: '/fleet-resources',
+      name: 'fleetresources',
+      component: () => import('./views/FleetResources.vue')
+      // ,meta: {
+      //   authRequired: true
+      // }
+    },
+    {
+      path: '/fleet-messenger',
+      name: 'fleetmessenger',
+      component: () => import('./views/FleetMessenger.vue')
     },
     {
       path: '/sign-in',

@@ -2,7 +2,7 @@
   <section>
     <v-container>
       <header>
-        <h1>Fleet Dashboard!</h1>
+        <h1>Fleet Reports!</h1>
       </header>
     </v-container>
   </section>
@@ -10,8 +10,9 @@
 
 <script>
 export default {
-  name: 'FleetDashboard'
+  name: 'FleetReports',
+  components: {}
 }
 </script>
 
-<style></style>
+<style scoped></style>
