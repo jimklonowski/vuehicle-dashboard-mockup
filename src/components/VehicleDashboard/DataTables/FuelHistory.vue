@@ -12,7 +12,7 @@
     <v-layout column>
       <v-data-table
         :headers="headers"
-        :items="fueldata"
+        :items="items"
         :items-per-page="10"
         :sort-by="['date']"
         :sort-desc="[true]"
@@ -32,7 +32,63 @@ export default {
   data: function() {
     return {
       title: 'Fuel History',
-      fueldata: [
+      headers: [
+        {
+          text: 'Date',
+          align: 'left',
+          sortable: true,
+          value: 'date'
+        },
+        {
+          text: 'Odometer',
+          align: 'left',
+          sortable: true,
+          value: 'odometer'
+        },
+        {
+          text: 'Driver',
+          align: 'left',
+          sortable: true,
+          value: 'driver'
+        },
+        {
+          text: 'Merchant',
+          align: 'left',
+          sortable: true,
+          value: 'merchant'
+        },
+        {
+          text: 'Merchant Address',
+          align: 'left',
+          sortable: true,
+          value: 'merchant_address'
+        },
+        {
+          text: 'Type',
+          align: 'left',
+          sortable: true,
+          value: 'type'
+        },
+        {
+          text: 'Quantity',
+          align: 'left',
+          sortable: true,
+          value: 'quantity'
+        },
+        {
+          text: 'Unit Cost',
+          align: 'left',
+          sortable: true,
+          value: 'unit_cost'
+        },
+        {
+          text: 'Amount',
+          align: 'left',
+          sortable: true,
+          value: 'amount'
+        }
+      ],
+      items: [
         {
           date: '2019-06-19',
           odometer: '18118',
@@ -372,62 +428,6 @@ export default {
           quantity: '19.89',
           unit_cost: '$3.699',
           amount: '$60.21'
-        }
-      ],
-      headers: [
-        {
-          text: 'Date',
-          align: 'left',
-          sortable: true,
-          value: 'date'
-        },
-        {
-          text: 'Odometer',
-          align: 'left',
-          sortable: true,
-          value: 'odometer'
-        },
-        {
-          text: 'Driver',
-          align: 'left',
-          sortable: true,
-          value: 'driver'
-        },
-        {
-          text: 'Merchant',
-          align: 'left',
-          sortable: true,
-          value: 'merchant'
-        },
-        {
-          text: 'Merchant Address',
-          align: 'left',
-          sortable: true,
-          value: 'merchant_address'
-        },
-        {
-          text: 'Type',
-          align: 'left',
-          sortable: true,
-          value: 'type'
-        },
-        {
-          text: 'Quantity',
-          align: 'left',
-          sortable: true,
-          value: 'quantity'
-        },
-        {
-          text: 'Unit Cost',
-          align: 'left',
-          sortable: true,
-          value: 'unit_cost'
-        },
-        {
-          text: 'Amount',
-          align: 'left',
-          sortable: true,
-          value: 'amount'
         }
       ]
     }

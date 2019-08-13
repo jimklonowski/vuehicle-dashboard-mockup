@@ -59,7 +59,20 @@ const router = new Router({
     {
       path: '/fleet-reports',
       name: 'fleetreports',
-      component: () => import('./views/FleetReports.vue')
+      component: () => import('./views/FleetReports/FleetReports.vue'),
+      children: [
+        {
+          path: '/fleet-reports/annual-expense',
+          name: 'annual-expense',
+          component: () => import('./views/FleetReports/AnnualExpense.vue')
+        },
+        {
+          path: '/fleet-reports/replacement-analysis',
+          name: 'replacement-analysis',
+          component: () =>
+            import('./views/FleetReports/ReplacementAnalysis.vue')
+        }
+      ]
     },
     {
       path: '/fleet-resources',

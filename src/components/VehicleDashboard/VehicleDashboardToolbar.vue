@@ -3,9 +3,9 @@
     <v-toolbar-title>Vehicle Dashboard</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-xs-only">
-      <v-btn text v-for="item in items" :key="item.text" :to="item.to">{{
-        item.text
-      }}</v-btn>
+      <v-btn text v-for="item in items" :key="item.text" :to="item.to">
+        {{ item.text }}
+      </v-btn>
     </v-toolbar-items>
   </v-toolbar>
 </template>
